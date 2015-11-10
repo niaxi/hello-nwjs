@@ -4,7 +4,10 @@
   "description": "",
   "main": "./src/index.html",
   "scripts": {
-    "start": "nw ."
+    "start": "nw .",
+    "clean": "rimraf ./dist/*",
+    "clean:win": "rimraf ./dist/hello-nwjs/*win64*",
+    "package:win": "npm run clean:win && nwbuild -p win64 -v 0.12.3 -o ./dist \"./**/**,!./node_modules/**/**,!./dist/**\""
   },
   "repository": {
     "type": "git",
@@ -15,5 +18,10 @@
   "bugs": {
     "url": "https://github.com/niaxi/hello-nwjs/issues"
   },
-  "homepage": "https://github.com/niaxi/hello-nwjs"
+  "homepage": "https://github.com/niaxi/hello-nwjs",
+  "devDependencies": {
+    "nw": "^0.12.3",
+    "nw-builder": "^2.0.2",
+    "rimraf": "^2.4.3"
+  }
 }
