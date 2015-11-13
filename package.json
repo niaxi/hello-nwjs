@@ -7,7 +7,9 @@
     "start": "nw .",
     "clean": "rimraf ./dist/*",
     "clean:win": "rimraf ./dist/hello-nwjs/*win64*",
-    "package:win": "npm run clean:win && nwbuild -p win64 -v 0.12.3 -o ./dist \"./**/**,!./node_modules/**/**,!./dist/**\""
+    "clean:mac": "rimraf ./dist/hello-nwjs/*osx64*",
+    "package:win": "npm run clean:win && nwbuild -p win64 -v 0.12.3 -o ./dist \"./**/**,!./node_modules/**/**,!./dist/**\"",
+    "package:mac": "npm run clean:mac && nwbuild -p osx64 -v 0.12.3 -o ./dist \"./**/**,!./node_modules/**/**,!./dist/**\""
   },
   "repository": {
     "type": "git",
