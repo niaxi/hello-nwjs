@@ -6,7 +6,7 @@
   "window": {
     "show": true,
     "toolbar": true,
-    "title": "Hello World | loading...",
+    "title": "loading... | Hello World!",
     "min_width": 400,
     "min_height": 500
   },
