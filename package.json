@@ -3,6 +3,25 @@
   "version": "0.0.1",
   "description": "",
   "main": "./src/index.html",
+  "window": {
+    "show": true,
+    "toolbar": true,
+    "title": "Hello World | loading...",
+    "min_width": 400,
+    "min_height": 500
+  },
+  "platformOverrides": {
+    "osx": {
+      "window": {
+        "toolbar": false
+      }
+    },
+    "win": {
+      "window": {
+        "toolbar": false
+      }
+    }
+  },
   "scripts": {
     "start": "nw .",
     "clean": "rimraf ./dist/*",
