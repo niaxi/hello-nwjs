@@ -4,20 +4,22 @@ Checking out [NWJS](http://nwjs.io/)
 
 ## Requirements
 
-install nwjs and make sure the `nw` executable is available on your PATH
+Installed by the install script in the Development section below.
+
+* nwjs -- builds against v0.12.3
 
 
 ## Development
 
-Initial setup (install dev dependencies)
+To initial setup (install dev dependencies)
 
 > npm install
 
-Run the app
+To run the app in development mode
 
 > npm start
 
-Package for Windows 64
+To package for Windows 64
 
 > npm run package:win
 
@@ -25,9 +27,17 @@ Runs:
 
 > node_modules\.bin\nwbuild.cmd -p win64 -v 0.12.3 -o ./dist "./**/**,!./node_modules/**/**,!./dist/**"
 
+To package for OSX 64
+
+> npm run package:mac
+
+To see all available build commands
+
+> npm run
 
 
-## Hacks
+
+## Hacks *#$!
 
 nwbuild cli does not currently support glob patterns for `files` param. I need in order to have a simple project dir but ignore certain dirs on build.
 
