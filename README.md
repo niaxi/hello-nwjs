@@ -11,15 +11,21 @@ Installed by the install script in the Development section below.
 
 ## Development
 
-To initial setup (install dev dependencies)
+### Commands
+
+npm is the build tool.
+
+#### Initial setup (install dev dependencies)
 
 > npm install
 
-To run the app in development mode
+#### Run the app in development mode
 
 > npm start
 
-To package for Windows 64
+#### Package for Windows 64
+
+See the Hacks section below for what to do before you can successfully package
 
 > npm run package:win
 
@@ -27,11 +33,13 @@ Runs:
 
 > node_modules\.bin\nwbuild.cmd -p win64 -v 0.12.3 -o ./dist "./**/**,!./node_modules/**/**,!./dist/**"
 
-To package for OSX 64
+#### Package for OSX 64
+
+See the Hacks section below for what to do before you can successfully package
 
 > npm run package:mac
 
-To see all available build commands
+#### See all available build commands
 
 > npm run
 

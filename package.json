@@ -1,12 +1,12 @@
 {
-  "name": "hello-nwjs",
+  "name": "Hello-NWjs",
   "version": "0.0.1",
   "description": "",
   "main": "./src/index.html",
   "window": {
     "show": true,
     "toolbar": true,
-    "title": "loading... | Hello World!",
+    "title": "Hello NWjs ...",
     "min_width": 400,
     "min_height": 500
   },
@@ -25,8 +25,8 @@
   "scripts": {
     "start": "nw .",
     "clean": "rimraf ./dist/*",
-    "clean:win": "rimraf ./dist/hello-nwjs/*win64*",
-    "clean:mac": "rimraf ./dist/hello-nwjs/*osx64*",
+    "clean:win": "rimraf ./dist/Hello-NWjs/*win64*",
+    "clean:mac": "rimraf ./dist/Hello-NWjs/*osx64*",
     "package:win": "npm run clean:win && nwbuild -p win64 -v 0.12.3 -o ./dist \"./**/**,!./node_modules/**/**,!./dist/**\"",
     "package:mac": "npm run clean:mac && nwbuild -p osx64 -v 0.12.3 -o ./dist \"./**/**,!./node_modules/**/**,!./dist/**\""
   },
