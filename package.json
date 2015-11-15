@@ -26,9 +26,12 @@
     "start": "nw .",
     "clean": "rimraf ./dist/*",
     "clean:win": "rimraf ./dist/Hello-NWjs/*win64*",
-    "clean:mac": "rimraf ./dist/Hello-NWjs/*osx64*",
+    "clean:mac": "rimraf ./dist/Hello-NWjs/*osx64* && rimraf ./dist/Hello-NWjs-osx64-$npm_package_version.zip",
+    "build:mac": "nwbuild -p osx64 -v 0.12.3 -o ./dist \"./**/**,!./node_modules/**/**,!./dist/**\"",
+    "zip:mac": "cd ./dist/Hello-NWjs/osx64 && bestzip ../../Hello-NWjs-osx64-$npm_package_version.zip . && cd ../../../",
     "package:win": "npm run clean:win && nwbuild -p win64 -v 0.12.3 -o ./dist \"./**/**,!./node_modules/**/**,!./dist/**\"",
-    "package:mac": "npm run clean:mac && nwbuild -p osx64 -v 0.12.3 -o ./dist \"./**/**,!./node_modules/**/**,!./dist/**\""
+    "package:mac": "npm run clean:mac && npm run build:mac && npm run zip:mac",
+    "env": "env"
   },
   "repository": {
     "type": "git",
@@ -41,6 +44,7 @@
   },
   "homepage": "https://github.com/niaxi/hello-nwjs",
   "devDependencies": {
+    "bestzip": "^1.1.2",
     "nw": "^0.12.3",
     "nw-builder": "^2.0.2",
     "rimraf": "^2.4.3"
