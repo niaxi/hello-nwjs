@@ -1,6 +1,6 @@
-# hello-nwjs
+# Hello NW.js
 
-Checking out [NWJS](http://nwjs.io/)
+Quick n dirty base for creating a desktop app based on [NWJS](http://nwjs.io/).
 
 ## Requirements
 
